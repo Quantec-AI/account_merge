@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title>계좌 정보 통합</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+  </head>
+  <body>
+    <h1>계좌 정보 통합</h1>
+	<div>"파일 선택"으로 전체 계좌 엑셀 파일 압축한 파일을 찾고, "Upload" 버튼을 누른 뒤 잠시 기다리면 통합된 엑셀 파일이 다운로드 됩니다.</br>
+	※1 최대 2분 정도 소요될 수 있습니다.</br>
+	※2 다운로드되는 엑셀 파일 이름은 merge_excel.xlsx 입니다.</br></br></br>
+	</div>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" accept=".zip" required>
+      <input type="submit" value="Upload">
+    </form>
+  </body>
+</html>
